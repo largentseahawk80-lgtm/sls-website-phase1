@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Southwest Liner Systems, Inc. | Website Mockup</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:#090f1c;color:#f8fafc;line-height:1.55}
+    .banner{background:#e8601a;color:white;text-align:center;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:.7rem 1rem;font-size:.8rem}
+    nav{position:sticky;top:0;background:rgba(9,15,28,.95);border-bottom:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 5vw;z-index:10}
+    .logo{font-weight:900;text-transform:uppercase;letter-spacing:.08em}.logo span{color:#e8601a}
+    .links{display:flex;gap:1rem;flex-wrap:wrap}.links a{color:#b7c1d1;text-decoration:none;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .hero{min-height:82vh;padding:6rem 5vw;display:flex;align-items:center;background:linear-gradient(135deg,rgba(9,15,28,.96),rgba(9,15,28,.7)),radial-gradient(circle at 20% 20%,rgba(232,96,26,.45),transparent 34%)}
+    .hero-inner{max-width:950px}.eyebrow{color:#ff8a3d;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin-bottom:1rem}
+    h1{font-size:clamp(3rem,9vw,7rem);line-height:.9;text-transform:uppercase;letter-spacing:-.06em;margin-bottom:1.2rem}h1 em{font-style:normal;color:#e8601a}
+    .hero p{max-width:760px;color:#d6deec;font-size:1.12rem;margin-bottom:1.5rem}.actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem}.primary{background:#e8601a;color:white}.secondary{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:white}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);background:#0d1525;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}.stat{text-align:center;padding:1.25rem;border-right:1px solid rgba(255,255,255,.12)}.stat:last-child{border-right:0}.num{font-size:2rem;color:#e8601a;font-weight:950}.label{color:#aeb8c8;font-size:.78rem;text-transform:uppercase;font-weight:800;letter-spacing:.06em}
+    section{padding:5rem 5vw}.wrap{max-width:1150px;margin:auto}.tag{color:#ff8a3d;font-size:.78rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.7rem}.title{font-size:clamp(2rem,5vw,4rem);line-height:1;text-transform:uppercase;letter-spacing:-.04em;margin-bottom:1rem}.lead{color:#aeb8c8;max-width:850px;font-size:1.05rem;margin-bottom:2rem}
+    .about{background:#090f1c}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}.card{background:#111827;border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:1.4rem}.photo-card{min-height:360px;background:linear-gradient(135deg,rgba(232,96,26,.28),rgba(255,255,255,.08));display:flex;align-items:end}.photo-card strong{background:rgba(0,0,0,.45);border-radius:999px;padding:.55rem .8rem}.materials{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.2rem}.materials span{border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:.45rem .7rem;color:#dbe3ef;background:rgba(255,255,255,.05);font-weight:800;font-size:.82rem}
+    .services{background:#111827}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.service{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:1.2rem}.service b{display:inline-grid;place-items:center;background:#e8601a;width:42px;height:42px;border-radius:12px;margin-bottom:1rem}.service h3{text-transform:uppercase;margin-bottom:.45rem}.service p{color:#aeb8c8}
+    .gallery{background:#0a101e}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.tile{min-height:215px;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:linear-gradient(135deg,rgba(232,96,26,.25),rgba(255,255,255,.07));display:flex;align-items:end;padding:1rem}.tile strong{background:rgba(0,0,0,.45);border-radius:999px;padding:.5rem .75rem}.video{grid-column:span 2;background:linear-gradient(135deg,rgba(232,96,26,.5),rgba(17,24,39,.7))}.video strong:before{content:'▶ ';color:#ffb27b}
+    .trust{background:#e8601a;text-align:center;font-size:clamp(2rem,6vw,5rem);font-weight:950;text-transform:uppercase;letter-spacing:.04em;padding:2rem 5vw}
+    .contact{background:#090f1c}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.5rem}.detail{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:1rem;margin-bottom:.7rem}.detail b{display:block}.detail span{color:#aeb8c8}form{display:grid;gap:.8rem}input,textarea{width:100%;min-height:52px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.06);color:white;padding:1rem;font:inherit}textarea{min-height:145px}button{min-height:54px;border:0;border-radius:16px;background:#e8601a;color:white;font-weight:950;text-transform:uppercase;letter-spacing:.1em}
+    footer{border-top:1px solid rgba(255,255,255,.12);color:#aeb8c8;padding:1.4rem 5vw;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.9rem}
+    @media(max-width:800px){nav{align-items:flex-start;flex-direction:column}.stats,.grid,.gallery-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.video{grid-column:span 1}.stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}}
+  </style>
+</head>
+<body>
+  <div class="banner">Owner Review Mockup — Not Final Published Website</div>
+  <nav>
+    <div class="logo">Southwest <span>Liner</span> Systems</div>
+    <div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Projects</a><a href="#contact">Contact</a></div>
+  </nav>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Since 2008 · New Mexico & Western U.S.</div>
+        <h1>Built to <em>Contain.</em><br>Installed to <em>Last.</em></h1>
+        <p>Southwest Liner Systems installs high-performance geosynthetic containment systems for demanding field projects, backed by experienced crews, field welding, testing, and QC documentation.</p>
+        <div class="actions"><a class="btn primary" href="#contact">Request a Project Review</a><a class="btn secondary" href="#services">View Services</a></div>
+      </div>
+    </section>
+    <div class="stats"><div class="stat"><div class="num">50+</div><div class="label">Years Combined Experience</div></div><div class="stat"><div class="num">2008</div><div class="label">Founded in New Mexico</div></div><div class="stat"><div class="num">10+</div><div class="label">Material Types</div></div><div class="stat"><div class="num">QC</div><div class="label">Field Documentation</div></div></div>
+    <section class="about" id="about"><div class="wrap about-grid"><div class="card"><div class="tag">About SLS</div><div class="title">Specialized Liner Installation</div><p class="lead">This mockup positions Southwest Liner Systems as a field-proven liner installation company serving ponds, landfills, wastewater, mining, agriculture, and industrial containment projects.</p><p>SLS can use this site to explain the trade clearly: material furnishing, deployment, welding, seaming, testing, repairs, and final documentation.</p><div class="materials"><span>HDPE</span><span>LLDPE</span><span>GCL</span><span>Geocomposite</span><span>Geonet</span><span>Geotextile</span><span>XR-5</span><span>PVC</span><span>EPDM</span></div></div><div class="card photo-card"><strong>Visual area for real SLS job photos</strong></div></div></section>
+    <section class="services" id="services"><div class="wrap"><div class="tag">What We Do</div><div class="title">Full-Service Liner Installation</div><p class="lead">A clean Services section the owners can review before real photos, final wording, and quote/contact routing are locked in.</p><div class="grid"><div class="service"><b>01</b><h3>Material Furnishing</h3><p>Supply and stage liner materials for large-scale field deployment.</p></div><div class="service"><b>02</b><h3>Liner Placement</h3><p>Place liner over prepared subgrade with practical field sequencing.</p></div><div class="service"><b>03</b><h3>Seam Welding</h3><p>Wedge and extrusion welding for geomembrane liner systems.</p></div><div class="service"><b>04</b><h3>Field Testing</h3><p>Air, vacuum, destructive, and repair tracking support.</p></div><div class="service"><b>05</b><h3>Pipe Boots</h3><p>Boots, penetrations, details, and specialty tie-ins.</p></div><div class="service"><b>06</b><h3>Final QC</h3><p>As-built style records, field documentation, and owner-ready deliverables.</p></div></div></div></section>
+    <section class="gallery" id="gallery"><div class="wrap"><div class="tag">Projects / Media</div><div class="title">Photos and Video Area</div><p class="lead">This section is where real SLS project images and a jobsite video can be added before final launch.</p><div class="gallery-grid"><div class="tile video"><strong>Owner video / jobsite intro</strong></div><div class="tile"><strong>Liner panels</strong></div><div class="tile"><strong>Seam welding</strong></div><div class="tile"><strong>Field QC</strong></div><div class="tile"><strong>Final project</strong></div></div></div></section>
+    <div class="trust">In God We Trust</div>
+    <section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="tag">Get Started</div><div class="title">Contact Southwest Liner Systems</div><p class="lead">Contact area shown as a mockup. Final launch can connect this button to email, phone, or a form service.</p><div class="detail"><b>Phone</b><span>505-771-9122</span></div><div class="detail"><b>Fax</b><span>505-771-0138</span></div><div class="detail"><b>Address</b><span>301 Calle Industrial, Bernalillo, NM 87004</span></div><div class="detail"><b>Service Area</b><span>New Mexico & the Western U.S.</span></div></div><div class="card"><form onsubmit="return false"><input placeholder="Name"><input placeholder="Email"><input placeholder="Subject"><textarea placeholder="Message"></textarea><button>Send Message</button></form></div></div></section>
+  </main>
+  <footer><strong>Southwest Liner Systems, Inc.</strong><span>Website mockup for owner review · 2026</span></footer>
+</body>
+</html>
